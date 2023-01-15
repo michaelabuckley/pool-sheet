@@ -1,1 +1,9 @@
-<p>bout-orders works!</p>
+<div class="bout-order-container">
+  <div class="bout-order-column"
+       *ngFor='let boutOrder of boutOrders'>
+    <div class="bout-order-bout" *ngFor="let bout of boutOrder">
+      {{ bout }}
+    </div>
+  </div>
+</div>
+
