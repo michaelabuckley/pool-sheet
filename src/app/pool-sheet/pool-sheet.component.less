@@ -1,0 +1,44 @@
+.pool-sheet-page {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-basis: available;
+
+  .main-column {
+    flex: 1 1 auto;
+
+
+    .sheet-header {
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+
+      .score-total-box {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        font-size: 1.5em;
+        width: 4em;
+        display: inline-block;
+        border-bottom: black thin solid;
+      }
+
+
+    }
+
+    bout-block {
+      display: block;
+      border-top: black thin solid;
+    }
+
+  }
+
+  .bout-order-column {
+    flex: 0 1 auto;
+
+
+  }
+
+}
+
+.inline-block {
+  display: inline-block;
+}
