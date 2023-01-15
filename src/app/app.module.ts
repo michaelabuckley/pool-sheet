@@ -7,6 +7,7 @@ import { DefaultPageComponent } from './default-page/default-page.component';
 import { PoolSheetComponent } from './pool-sheet/pool-sheet.component';
 import { BoutBlockComponent } from './bout-block/bout-block.component';
 import { TwoPageComponent } from './two-page/two-page.component';
+import { BoutOrdersComponent } from './bout-orders/bout-orders.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TwoPageComponent } from './two-page/two-page.component';
     DefaultPageComponent,
     PoolSheetComponent,
     BoutBlockComponent,
-    TwoPageComponent
+    TwoPageComponent,
+    BoutOrdersComponent
   ],
   imports: [
     BrowserModule,
