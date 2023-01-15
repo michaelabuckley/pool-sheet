@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
 import { PoolSheetComponent } from './pool-sheet/pool-sheet.component';
 import { BoutBlockComponent } from './bout-block/bout-block.component';
+import { TwoPageComponent } from './two-page/two-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefaultPageComponent,
     PoolSheetComponent,
-    BoutBlockComponent
+    BoutBlockComponent,
+    TwoPageComponent
   ],
   imports: [
     BrowserModule,

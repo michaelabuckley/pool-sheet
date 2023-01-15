@@ -2,10 +2,9 @@
   <div class="main-column">
     <div class="sheet-header">
       <div class="score-total-box">V&nbsp;&nbsp;/D&nbsp;&nbsp;&nbsp;&nbsp;</div>
-      <div>      Event</div>
-      <div>			Pool</div>
-      <div>      Date</div>
-      <div>			Piste</div>
+      <div class="header-field header-event">Event:</div>
+      <div class="header-field">Date: </div>
+      <div class="header-field">Piste/Pool:</div>
     </div>
     <div *ngFor="let x of opponents;  let i=index">
       <bout-block [index]="i"></bout-block>

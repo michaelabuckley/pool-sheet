@@ -10,17 +10,24 @@
 
     .sheet-header {
       display: grid;
-      grid-template-columns: auto 1fr 1fr;
+      grid-template-columns: auto 1fr 1fr ;
 
       .score-total-box {
-        grid-column: 1;
         grid-row: 1 / span 2;
         font-size: 1.5em;
         width: 4em;
-        display: inline-block;
-        border-bottom: black thin solid;
+        //display: inline-block;
+        border-right: black thin solid;
       }
 
+      .header-field{
+        min-width: 5em;
+        margin-left: .5em;
+      }
+      .header-event {
+        grid-row: 1;
+        grid-column: 2 / span 2;
+      }
 
     }
 
