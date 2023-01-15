@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import boutOrders from 'raw-loader!./bout-orders-data.csv';
+import boutOrdersCsv from 'raw-loader!./bout-orders-data.csv';
 
 @Component({
   selector: 'app-bout-orders',
