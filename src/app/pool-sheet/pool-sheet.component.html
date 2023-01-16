@@ -1,14 +1,12 @@
 <div class="pool-sheet-page">
   <div class="main-column">
-    <div class="sheet-header">
-      <div class="score-total-box">V&nbsp;&nbsp;/D&nbsp;&nbsp;&nbsp;&nbsp;</div>
-      <div class="header-field header-event">Event:</div>
-      <div class="header-field">Date: </div>
-      <div class="header-field">Piste/Pool:</div>
-    </div>
-    <div *ngFor="let x of opponents;  let i=index">
-      <bout-block [index]="i"></bout-block>
-    </div>
+    <pool-sheet-header class="page-block">
+
+    </pool-sheet-header>
+
+    <bout-block class="page-block"
+                *ngFor="let x of opponents; let i=index"
+                [index]="i+1"></bout-block>
 
   </div>
   <bout-orders class="bout-order-column"></bout-orders>

@@ -1,2 +1,20 @@
-& {
+
+@import "../theme.less";
+
+:host {
+  position: relative;
+
+  hit-grid {
+    position: relative;
+    bottom: 0;
+  }
+
+  .bout-block-score-block {
+    display: inline-block;
+    min-height: @block-height - 40px;
+    width: @score-block-width - 1;
+    border-right: black 1px solid;
+
+  }
+
 }

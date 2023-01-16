@@ -1,0 +1,26 @@
+@import '../theme';
+
+
+.pool-sheet-header {
+  display: grid;
+  grid-template-columns: auto 5fr 100px 80px;
+  position: relative;
+  min-height: @block-height;
+
+
+  .score-total-box {
+    grid-row: 1;
+    font-size: 1.5em;
+    width: @score-block-width - 1;
+    border-right: black thin solid;
+  }
+
+  .header-event {
+
+  }
+
+  .header-field{
+    min-width: 5em;
+    margin-left: .5em;
+  }
+}

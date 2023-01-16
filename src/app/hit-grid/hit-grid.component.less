@@ -1,0 +1,16 @@
+@import '../theme';
+
+:host {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap:0;
+  width: @basic-score-column*9;
+
+  .hit-grid-cell {
+    border-top: 1px black solid;
+    border-right: 1px black solid;
+    width: @basic-score-column - 1px;
+    margin: 0;
+    padding: 0;
+  }
+}

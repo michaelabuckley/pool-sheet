@@ -8,6 +8,8 @@ import { PoolSheetComponent } from './pool-sheet/pool-sheet.component';
 import { BoutBlockComponent } from './bout-block/bout-block.component';
 import { TwoPageComponent } from './two-page/two-page.component';
 import { BoutOrdersComponent } from './bout-orders/bout-orders.component';
+import { HitGridComponent } from './hit-grid/hit-grid.component';
+import { PoolSheetHeaderComponent } from './pool-sheet-header/pool-sheet-header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BoutOrdersComponent } from './bout-orders/bout-orders.component';
     PoolSheetComponent,
     BoutBlockComponent,
     TwoPageComponent,
-    BoutOrdersComponent
+    BoutOrdersComponent,
+    HitGridComponent,
+    PoolSheetHeaderComponent
   ],
   imports: [
     BrowserModule,
