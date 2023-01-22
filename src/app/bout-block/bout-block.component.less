@@ -2,19 +2,31 @@
 @import "../theme.less";
 
 :host {
-  position: relative;
+  display: grid;
+  grid-template-areas:
+    "opponent opponent score"
+    "opponent opponent .";
+  grid-gap: 0;
+  grid-template-columns: 1fr auto auto;
 
-  hit-grid {
-    position: relative;
-    bottom: 0;
+  .bout-block-hit-grid {
+    //grid-area: hits;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 2;
+    z-index: 2;
+    border-left: black solid thin;
   }
 
+  .bout-block-opponent-notes {
+    grid-area: opponent;
+    z-index: 2;
+  }
   .bout-block-score-block {
-    display: inline-block;
-    min-height: @block-height - 40px;
+    grid-area: score;
+    //min-height: @block-height - 40px;
     width: @score-block-width - 1;
-    border-right: black 1px solid;
-
+    border-left: black 1px solid;
   }
 
 }

@@ -1,22 +1,35 @@
 @import '../theme';
 
 
-.pool-sheet-header {
+:host {
   display: grid;
-  grid-template-columns: auto 5fr 100px 80px;
-  position: relative;
+  grid-template-areas:
+    "event event score"
+    "date piste score";
+  grid-template-columns: 1fr 1fr auto;
+  //position: relative;
   min-height: @block-height;
 
 
+  .header-event {
+    grid-area: event;
+  }
+
+
   .score-total-box {
-    grid-row: 1;
+    grid-area: score;
     font-size: 1.5em;
     width: @score-block-width - 1;
     border-right: black thin solid;
+    border-left: black thin solid;
   }
 
-  .header-event {
+  .header-field-date {
+    grid-area: date;
+  }
 
+  .header-field-piste {
+    grid-area: piste;
   }
 
   .header-field{
