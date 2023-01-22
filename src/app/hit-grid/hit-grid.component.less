@@ -6,11 +6,21 @@
   gap:0;
   width: @basic-score-column*9;
 
+
   .hit-grid-cell {
-    border-top: 1px black solid;
-    border-right: 1px black solid;
-    width: @basic-score-column - 1px;
+    border-left: black dotted thin;
+    border-top: black solid thin;
+    //width: @basic-score-column - 1px;
     margin: 0;
     padding: 0;
+  }
+
+  .hit-grid-cell:nth-child(9n+1) {
+    border-left: black solid thin;
+  }
+
+  .hit-grid-cell:nth-child(n+10):nth-child(-n+18) {
+    border-top: black dotted thin;
+    //border-left: black solid thin;
   }
 }

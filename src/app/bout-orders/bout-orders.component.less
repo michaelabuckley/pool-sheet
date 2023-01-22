@@ -2,9 +2,15 @@
 
 .bout-order-container {
   display: flex;
+  font-size: .8em;
+  height: 100%;
   .bout-order-column {
+    text-align: center;
     padding-left: @bout-order-column-margin;
     padding-right: @bout-order-column-margin;
-    border-left: black thin dashed;
+    border-right: black thin dashed;
+  }
+  >:last-child {
+    border-right: black thin solid;
   }
 }

@@ -4,10 +4,15 @@
 @block-height: 80px;
 
 @bout-order-column-margin: 3px;
-@score-block-width: 6*@basic-score-column;
+@score-block-width: (4*@basic-score-column);
 @hit-grid-width: 9*@basic-score-column;
 
-body {
-  height: 100vh;
+@media print{
+  @page {size: landscape}
+  body {
+    height: 100vh;
+  }
+
 }
+
 

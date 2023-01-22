@@ -7,11 +7,30 @@ let headers = rawRows[0];
 let data = rawRows.slice(1);
 
 const orderIndex: Record<string, number> = Object.fromEntries(headers.map((s,i)=>[s,i]));
-
-const boutOrders: string[][] =
-  headers.map(n=>
-      data.map(r => r[orderIndex[n]]).filter(s=>s)
+const displayColumns: string[][] =
+  headers.map(name=>
+      data.map(r => r[orderIndex[name]]).filter(s=>s)
   );
+
+let boutOrders = Object.fromEntries(
+  headers.map((s,i)=>
+    [
+      s,
+      {
+        name: s,
+        colIdx: i,
+        bouts: data.map(row=>row[i])
+      }
+    ]
+  ));
+
+var combinedColumns = [
+  ['8'].concat(boutOrders['standard8'].bouts),
+  ['6'].concat(boutOrders['standard6'].bouts, '\xa0', 'alt6', boutOrders['alt6'].bouts),
+  ['7'].concat(boutOrders['standard7'].bouts, '\xa0', 'alt7', boutOrders['alt7'].bouts),
+
+];
+
 
 @Component({
   selector: 'bout-orders',
@@ -21,7 +40,7 @@ const boutOrders: string[][] =
 
 
 export class BoutOrdersComponent {
-  boutOrders: string[][] = boutOrders
+  boutOrders: string[][] = combinedColumns
   orderIndex: any = orderIndex
 
 

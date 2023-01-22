@@ -8,6 +8,7 @@
     "opponent opponent .";
   grid-gap: 0;
   grid-template-columns: 1fr auto auto;
+  border-right: black dotted thin;
 
   .bout-block-hit-grid {
     //grid-area: hits;
@@ -15,18 +16,22 @@
     grid-column-end: 4;
     grid-row: 2;
     z-index: 2;
-    border-left: black solid thin;
+    //border-left: black solid thin;
   }
 
   .bout-block-opponent-notes {
     grid-area: opponent;
     z-index: 2;
+    padding: .2rem;
+    //border-right: black dotted thin;
   }
   .bout-block-score-block {
     grid-area: score;
+    text-align: right;
+    padding-right: 1em;
+    font-size: 1.5em;
     //min-height: @block-height - 40px;
-    width: @score-block-width - 1;
-    border-left: black 1px solid;
+    width: @score-block-width - 0px;
   }
 
 }

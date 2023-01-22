@@ -6,9 +6,10 @@
   grid-template-areas:
     "event event score"
     "date piste score";
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 1fr auto;
   //position: relative;
-  min-height: @block-height;
+  //min-height: @block-height;
 
 
   .header-event {
@@ -18,10 +19,12 @@
 
   .score-total-box {
     grid-area: score;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: @score-block-width - 1;
     border-right: black thin solid;
     border-left: black thin solid;
+    text-align: right;
+    //padding: 5px;
   }
 
   .header-field-date {
@@ -30,6 +33,7 @@
 
   .header-field-piste {
     grid-area: piste;
+    padding-right: 3em;
   }
 
   .header-field{
