@@ -4,8 +4,8 @@
 :host {
   display: grid;
   grid-template-areas:
-    "event event score"
-    "date piste score";
+    "event event event score"
+    "date pool piste score";
   grid-template-columns: 1fr auto auto;
   grid-template-rows: 1fr auto;
   //position: relative;
@@ -31,9 +31,14 @@
     grid-area: date;
   }
 
+  .header-field-pool {
+    grid-area: pool;
+    padding-right: 1em;
+  }
+
   .header-field-piste {
     grid-area: piste;
-    padding-right: 3em;
+    padding-right: 2em;
   }
 
   .header-field{
